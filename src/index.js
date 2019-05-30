@@ -1,3 +1,5 @@
+import Editor from "./components/Editor.vue";
+
 const version = "__VERSION__";
 
 const install = Vue => {
@@ -14,6 +16,7 @@ const install = Vue => {
    * NOTE:
    *  somthing implementation here ...
    */
+  Vue.component("Editor", Editor);
 };
 
 const plugin = {
