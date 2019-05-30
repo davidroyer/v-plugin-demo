@@ -1,4 +1,5 @@
-import Editor from "./components/Editor.vue";
+import Editor from "@/components/Editor.vue";
+import VueEditor from "@/components/VueEditor.vue";
 
 const version = "__VERSION__";
 
@@ -17,6 +18,7 @@ const install = Vue => {
    *  somthing implementation here ...
    */
   Vue.component("Editor", Editor);
+  Vue.component("VueEditor", VueEditor);
 };
 
 const plugin = {

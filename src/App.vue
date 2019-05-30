@@ -4,6 +4,7 @@
     <h1>Welcome to Your Plugin in Vue.js</h1>
     <p>add: 1 + 1 = {{ $add(1, 1) }}</p>
     <Editor v-model="content" @text-change="handleTextChange" />
+    <!-- <VueEditor v-model="content" /> -->
   </div>
 </template>
 

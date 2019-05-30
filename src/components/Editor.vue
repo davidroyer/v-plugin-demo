@@ -53,7 +53,9 @@
 
 <script>
 import Quill from "quill";
+import fullToolbar from "@/helpers/fullToolbar";
 
+console.log("TCL: fullToolbar", fullToolbar);
 export default {
   props: {
     value: String,
@@ -110,5 +112,4 @@ export default {
   }
 };
 </script>
-
-<style src="quill/dist/quill.snow.css"></style>
+<style src="../assets/editor.css"></style>
