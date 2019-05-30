@@ -1,16 +1,34 @@
 {
   "name": "v-plugin-demo",
   "version": "0.1.0",
-  "private": true,
+  "author": {
+    "name": "David Royer",
+    "email": "droyer01@gmail.com"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "demo": "vue-cli-service demo",
+    "docs": "npm run docs:serve",
+    "docs:build": "vue-cli-service docs --mode build",
+    "docs:serve": "vue-cli-service docs --mode serve",
+    "prepublish": "vue-cli-service lint && vue-cli-service docs --mode build && vue-cli-service build",
+    "start": "vue-cli-service serve",
     "test:unit": "vue-cli-service test:unit"
   },
+  "main": "dist/v-plugin-demo.common.js",
+  "module": "dist/v-plugin-demo.esm.js",
+  "unpkg": "dist/v-plugin-demo.umd.min.js",
+  "files": [
+    "dist/v-plugin-demo.common.js",
+    "dist/v-plugin-demo.umd.min.js",
+    "dist/v-plugin-demo.umd.js",
+    "dist/v-plugin-demo.esm.js",
+    "src"
+  ],
   "dependencies": {
-    "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+    "core-js": "^2.6.5"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.8.0",
@@ -26,6 +44,10 @@
     "eslint-plugin-vue": "^5.0.0",
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.6.10"
-  }
+    "vue-cli-plugin-p11n": "^0.3.0",
+    "vue-template-compiler": "^2.6.10",
+    "vue": "^2.6.10"
+  },
+  "jsdelivr": "dist/v-plugin-demo.umd.min.js",
+  "sideeffects": false
 }
