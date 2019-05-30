@@ -15,7 +15,8 @@
     "docs:build": "vue-cli-service docs --mode build",
     "docs:serve": "vue-cli-service docs --mode serve",
     "prepublish": "vue-cli-service lint && vue-cli-service docs --mode build && vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "build:clog": "yarn conventional-changelog -i CHANGELOG.md -s -n ./node_modules/git-commit-message-convention/convention.js -r 0"
   },
   "main": "dist/v-plugin-demo.common.js",
   "module": "dist/v-plugin-demo.esm.js",
