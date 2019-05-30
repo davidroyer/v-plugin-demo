@@ -3,7 +3,7 @@
  * (c) 2019 David Royer
  * Released under the undefined License.
  */
-import Quill from 'quill';
+import _Quill from 'quill';
 
 var fullToolbar = [[{
   font: []
@@ -66,7 +66,7 @@ var script = {
   mounted: function mounted() {
     var _this = this;
 
-    this.quill = new Quill(this.$refs.editorElement, {
+    this.quill = new _Quill(this.$refs.editorElement, {
       modules: {
         toolbar: this.$refs.toolbarElement
       },
@@ -2730,10 +2730,10 @@ var oldApi = {
     customModules: Array
   },
   methods: {
-    registerCustomModules: function registerCustomModules(Quill$$1) {
+    registerCustomModules: function registerCustomModules(Quill) {
       if (this.customModules !== undefined) {
         this.customModules.forEach(function (customModule) {
-          Quill$$1.register("modules/" + customModule.alias, customModule.module);
+          Quill.register("modules/" + customModule.alias, customModule.module);
         });
       }
     }
@@ -3080,7 +3080,7 @@ function () {
 }(); // module.exports = MarkdownShortcuts;
 
 //
-var Quill$1 = window.Quill || Quill;
+var Quill = window.Quill || _Quill;
 var script$1 = {
   name: "VueEditor",
   mixins: [oldApi],
@@ -3138,7 +3138,7 @@ var script$1 = {
     }
   },
   mounted: function mounted() {
-    this.registerCustomModules(Quill$1);
+    this.registerCustomModules(Quill);
     this.registerPrototypes();
     this.initializeEditor();
   },
@@ -3163,7 +3163,7 @@ var script$1 = {
         readOnly: this.disabled ? this.disabled : false
       };
       this.prepareEditorConfig(editorConfig);
-      this.quill = new Quill$1(this.$refs.quillContainer, editorConfig);
+      this.quill = new Quill(this.$refs.quillContainer, editorConfig);
     },
     setModules: function setModules() {
       var modules = {
@@ -3171,7 +3171,7 @@ var script$1 = {
       };
 
       if (this.useMarkdownShortcuts) {
-        Quill$1.register("modules/markdownShortcuts", MarkdownShortcuts, true);
+        Quill.register("modules/markdownShortcuts", MarkdownShortcuts, true);
         modules["markdownShortcuts"] = {};
       }
 
@@ -3188,11 +3188,11 @@ var script$1 = {
       }
     },
     registerPrototypes: function registerPrototypes() {
-      Quill$1.prototype.getHTML = function () {
+      Quill.prototype.getHTML = function () {
         return this.container.querySelector(".ql-editor").innerHTML;
       };
 
-      Quill$1.prototype.getWordCount = function () {
+      Quill.prototype.getWordCount = function () {
         return this.container.querySelector(".ql-editor").innerText.length;
       };
     },
