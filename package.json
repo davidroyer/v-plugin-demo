@@ -6,6 +6,7 @@
     "email": "droyer01@gmail.com"
   },
   "scripts": {
+    "dev": "vue-cli-service serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
@@ -14,7 +15,6 @@
     "docs:build": "vue-cli-service docs --mode build",
     "docs:serve": "vue-cli-service docs --mode serve",
     "prepublish": "vue-cli-service lint && vue-cli-service docs --mode build && vue-cli-service build",
-    "start": "vue-cli-service serve",
     "test:unit": "vue-cli-service test:unit"
   },
   "main": "dist/v-plugin-demo.common.js",
