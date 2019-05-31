@@ -25,3 +25,14 @@ The graphiteWidth option has been removed. The default graphite width of 10mm is
 ```
 
 ### Added `globals` property to output for Quill
+
+
+
+
+## Snippets
+
+```html
+<style>
+@import "~/src/assets/editor.css";
+</style>
+```

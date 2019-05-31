@@ -54,6 +54,14 @@
 <script>
 import Quill from "quill";
 import fullToolbar from "@/helpers/fullToolbar";
+import defaultToolbar from "@/helpers/default-toolbar";
+console.log("TCL: defaultToolbar", defaultToolbar);
+// import merge from "lodash/merge";
+// console.log("TCL: merge", merge);
+import oldApi from "@/helpers/old-api";
+console.log("TCL: oldApi", oldApi);
+import MarkdownShortcuts from "@/helpers/markdown-shortcuts";
+console.log("TCL: MarkdownShortcuts", MarkdownShortcuts);
 
 console.log("TCL: fullToolbar", fullToolbar);
 export default {
@@ -64,7 +72,11 @@ export default {
     formats: Array,
     editorStyle: null
   },
-  quill: null,
+
+  data: () => ({
+    quill: null
+  }),
+  // quill: null,
   watch: {
     value(newValue, oldValue) {
       if (newValue !== oldValue && this.quill && !this.quill.hasFocus()) {
@@ -112,4 +124,8 @@ export default {
   }
 };
 </script>
-<style src="../assets/editor.css"></style>
+
+<style>
+/* You can choose which parts of the Quill CSS you want to use. */
+@import "~quill/dist/quill.snow.css";
+</style>
