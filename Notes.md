@@ -1,3 +1,11 @@
+## For Build With Seperated CSS
+
+## :pencil:
+
+```js
+import {VuePlugin} from 'vue2-editor/modular'
+```
+
 ## For Commits
 
 [Repo: git-commit-message-convention](https://github.com/kazupon/git-commit-message-convention)
