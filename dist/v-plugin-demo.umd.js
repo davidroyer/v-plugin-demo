@@ -1,5 +1,5 @@
 /*!
- * v-plugin-demo v0.1.0 
+ * v-plugin-demo v0.2.0 
  * (c) 2019 David Royer
  * Released under the undefined License.
  */
@@ -977,7 +977,7 @@
       undefined
     );
 
-  var version = "0.1.0";
+  var version = "0.2.0";
 
   var install = function install(Vue) {
     /*
