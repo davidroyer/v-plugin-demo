@@ -1,7 +1,5 @@
 ## For Build With Seperated CSS
 
-## :pencil:
-
 ```js
 import {VuePlugin} from 'vue2-editor/modular'
 ```
@@ -22,6 +20,12 @@ The graphiteWidth option has been removed. The default graphite width of 10mm is
 
 > Modification have been made to `vue-cli-p11n`
 
+### Default & Named Exports
+
+**Note:** Needed to set `named` option in in `output` of `p11n` entry file to get default and named exports
+
+<br>
+
 ### This allowed aliases to work for `.vue`. and `.js` files when building
 
 ```js
@@ -31,6 +35,8 @@ The graphiteWidth option has been removed. The default graphite width of 10mm is
     })
 }
 ```
+
+<br>
 
 ### To pull CSS out into its own files
 

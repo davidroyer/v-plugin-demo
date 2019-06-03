@@ -3,13 +3,15 @@
     <img alt="Vue logo" src="./assets/logo.png" />
     <h1>Welcome to Your Plugin in Vue.js</h1>
     <p>add: 1 + 1 = {{ $add(1, 1) }}</p>
-    <!-- <Editor v-model="content" @text-change="handleTextChange" /> -->
-    <VueEditor :editor-options="editorOptions" v-model="content" />
+    <Editor v-model="content" @text-change="handleTextChange" />
+    <!-- <VueEditor :editor-options="editorOptions" v-model="content" /> -->
   </div>
 </template>
 
 <script>
+import { Editor } from "./../dist/v-plugin-demo.esm.js";
 export default {
+  components: { Editor },
   data() {
     return {
       // eToolbar: [

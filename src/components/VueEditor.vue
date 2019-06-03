@@ -90,10 +90,10 @@ export default {
     }
   },
 
-  data: () => ({
-    quill: null
-  }),
-
+  // data: () => ({
+  //   quill: null
+  // }),
+  quill: null,
   watch: {
     value(val) {
       if (val != this.quill.root.innerHTML && !this.quill.hasFocus()) {

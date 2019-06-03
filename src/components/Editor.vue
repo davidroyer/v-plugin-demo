@@ -73,10 +73,10 @@ export default {
     editorStyle: null
   },
 
-  data: () => ({
-    quill: null
-  }),
-  // quill: null,
+  // data: () => ({
+  //   quill: null
+  // }),
+  quill: null,
   watch: {
     value(newValue, oldValue) {
       if (newValue !== oldValue && this.quill && !this.quill.hasFocus()) {

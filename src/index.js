@@ -1,3 +1,4 @@
+import Quill from "quill";
 import Editor from "@/components/Editor.vue";
 import VueEditor from "@/components/VueEditor.vue";
 
@@ -23,11 +24,12 @@ const install = Vue => {
 
 const plugin = {
   install,
-  version
+  version,
+  Quill
 };
 
 export default plugin;
-export { VueEditor };
+export { VueEditor, Editor, Quill };
 
 if (typeof window !== "undefined" && window.Vue) {
   window.Vue.use(plugin);
