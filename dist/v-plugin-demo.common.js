@@ -5,6 +5,8 @@
  */
 'use strict';
 
+Object.defineProperty(exports, '__esModule', { value: true });
+
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
 var Quill = _interopDefault(require('quill'));
@@ -1007,4 +1009,5 @@ if (typeof window !== "undefined" && window.Vue) {
   window.Vue.use(plugin);
 }
 
-module.exports = plugin;
+exports.default = plugin;
+exports.VueEditor = VueEditor;

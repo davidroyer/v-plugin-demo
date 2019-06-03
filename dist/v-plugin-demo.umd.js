@@ -4,10 +4,10 @@
  * Released under the undefined License.
  */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('quill')) :
-  typeof define === 'function' && define.amd ? define(['quill'], factory) :
-  (global = global || self, global.VPluginDemo = factory(global.Quill));
-}(this, function (Quill) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('quill')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'quill'], factory) :
+  (global = global || self, factory(global.VPluginDemo = {}, global.Quill));
+}(this, function (exports, Quill) { 'use strict';
 
   Quill = Quill && Quill.hasOwnProperty('default') ? Quill['default'] : Quill;
 
@@ -1009,6 +1009,9 @@
     window.Vue.use(plugin);
   }
 
-  return plugin;
+  exports.default = plugin;
+  exports.VueEditor = VueEditor;
+
+  Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
