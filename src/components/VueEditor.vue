@@ -17,7 +17,6 @@
 <script>
 import Quill from "quill";
 import defaultToolbar from "@/helpers/default-toolbar";
-// import merge from "lodash/merge";
 import oldApi from "@/helpers/old-api";
 import MarkdownShortcuts from "@/helpers/markdown-shortcuts";
 
