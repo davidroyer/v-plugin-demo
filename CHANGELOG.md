@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/davidroyer/v-plugin-demo/compare/v0.2.1...v0.3.0) (2019-06-04)
+
+
+### Features
+
+* **eslint:** clean code  with new config :wrench: ([2f25e32](https://github.com/davidroyer/v-plugin-demo/commit/2f25e32))
+
+
+
 ### [0.2.1](https://github.com/davidroyer/v-plugin-demo/compare/v0.2.0...v0.2.1) (2019-06-04)
 
 
