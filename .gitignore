@@ -24,3 +24,7 @@ docs/.vuepress/dist
 *.sln
 *.sw*
   
+
+# backups
+
+.BACKUP

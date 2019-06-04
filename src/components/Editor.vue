@@ -55,17 +55,7 @@
 /* eslint-disable vue/require-default-prop */
 
 import Quill from "quill";
-import fullToolbar from "@/helpers/fullToolbar";
-import defaultToolbar from "@/helpers/default-toolbar";
-console.log("TCL: defaultToolbar", defaultToolbar);
-// import merge from "lodash/merge";
-// console.log("TCL: merge", merge);
-import oldApi from "@/helpers/old-api";
-console.log("TCL: oldApi", oldApi);
-import MarkdownShortcuts from "@/helpers/markdown-shortcuts";
-console.log("TCL: MarkdownShortcuts", MarkdownShortcuts);
 
-console.log("TCL: fullToolbar", fullToolbar);
 export default {
   props: {
     value: String,
