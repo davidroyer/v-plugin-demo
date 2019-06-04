@@ -20,6 +20,7 @@
     "prepublish": "vue-cli-service lint && vue-cli-service docs --mode build && vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "log": "yarn conventional-changelog -i CHANGELOG.md -s ./node_modules/git-commit-message-convention/convention.js -r 0",
+    "precommit": "yarn vue-cli-service build",
     "release": "standard-version && git push --follow-tags"
   },
   "main": "dist/v-plugin-demo.common.js",
