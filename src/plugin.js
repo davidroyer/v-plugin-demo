@@ -5,6 +5,7 @@
 
 import Vue from "vue";
 import plugin from "./index";
+console.log("TCL: plugin", plugin);
 import { VueEditor } from "./index";
 console.log("TCL: VueEditor", VueEditor);
 

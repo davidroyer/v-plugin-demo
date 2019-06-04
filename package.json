@@ -8,7 +8,8 @@
   "scripts": {
     "dev": "vue-cli-service serve",
     "serve": "vue-cli-service serve",
-    "build": "yarn build:bundled && yarn build:modular",
+    "build": "vue-cli-service build",
+    "build:all": "yarn build:bundled && yarn build:modular",
     "build:bundled": "vue-cli-service build",
     "build:modular": "BUILD_TYPE=modular vue-cli-service build",
     "lint": "vue-cli-service lint",

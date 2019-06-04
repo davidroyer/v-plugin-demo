@@ -132,6 +132,53 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) _setPrototypeOf(subClass, superClass);
+}
+
+function _getPrototypeOf(o) {
+  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
+}
+
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (call && (typeof call === "object" || typeof call === "function")) {
+    return call;
+  }
+
+  return _assertThisInitialized(self);
+}
+
 function _slicedToArray(arr, i) {
   return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
 }
@@ -170,13 +217,26 @@ function _nonIterableRest() {
   throw new TypeError("Invalid attempt to destructure non-iterable instance");
 }
 
-/* eslint-disable no-unused-vars */
-// import Quill from "quill";
-// let BlockEmbed = Quill.import("blots/block/embed");
-// class HorizontalRule extends BlockEmbed {}
-// HorizontalRule.blotName = "hr";
-// HorizontalRule.tagName = "hr";
-// Quill.register("formats/horizontal", HorizontalRule);
+var BlockEmbed = Quill.import("blots/block/embed");
+
+var HorizontalRule =
+/*#__PURE__*/
+function (_BlockEmbed) {
+  _inherits(HorizontalRule, _BlockEmbed);
+
+  function HorizontalRule() {
+    _classCallCheck(this, HorizontalRule);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(HorizontalRule).apply(this, arguments));
+  }
+
+  return HorizontalRule;
+}(BlockEmbed);
+
+HorizontalRule.blotName = "hr";
+HorizontalRule.tagName = "hr";
+Quill.register("formats/horizontal", HorizontalRule);
+
 var MarkdownShortcuts =
 /*#__PURE__*/
 function () {
@@ -205,7 +265,7 @@ function () {
     }, {
       name: "blockquote",
       pattern: /^(>)\s/g,
-      action: function action(text, selection) {
+      action: function action(_text, selection) {
         // Need to defer this action https://github.com/quilljs/quill/issues/1134
         setTimeout(function () {
           _this.quill.formatLine(selection.index, 1, "blockquote", true);
@@ -216,7 +276,7 @@ function () {
     }, {
       name: "code-block",
       pattern: /^`{3}(?:\s|\n)/g,
-      action: function action(text, selection) {
+      action: function action(_text, selection) {
         // Need to defer this action https://github.com/quilljs/quill/issues/1134
         setTimeout(function () {
           _this.quill.formatLine(selection.index, 1, "code-block", true);
@@ -227,7 +287,7 @@ function () {
     }, {
       name: "bolditalic",
       pattern: /(?:\*|_){3}(.+?)(?:\*|_){3}/g,
-      action: function action(text, selection, pattern, lineStart) {
+      action: function action(text, _selection, pattern, lineStart) {
         var match = pattern.exec(text);
         var annotatedText = match[0];
         var matchedText = match[1];
@@ -247,7 +307,7 @@ function () {
     }, {
       name: "bold",
       pattern: /(?:\*|_){2}(.+?)(?:\*|_){2}/g,
-      action: function action(text, selection, pattern, lineStart) {
+      action: function action(text, _selection, pattern, lineStart) {
         var match = pattern.exec(text);
         var annotatedText = match[0];
         var matchedText = match[1];
@@ -266,7 +326,7 @@ function () {
     }, {
       name: "italic",
       pattern: /(?:\*|_){1}(.+?)(?:\*|_){1}/g,
-      action: function action(text, selection, pattern, lineStart) {
+      action: function action(text, _selection, pattern, lineStart) {
         var match = pattern.exec(text);
         var annotatedText = match[0];
         var matchedText = match[1];
@@ -285,7 +345,7 @@ function () {
     }, {
       name: "strikethrough",
       pattern: /(?:~~)(.+?)(?:~~)/g,
-      action: function action(text, selection, pattern, lineStart) {
+      action: function action(text, _selection, pattern, lineStart) {
         var match = pattern.exec(text);
         var annotatedText = match[0];
         var matchedText = match[1];
@@ -304,7 +364,7 @@ function () {
     }, {
       name: "code",
       pattern: /(?:`)(.+?)(?:`)/g,
-      action: function action(text, selection, pattern, lineStart) {
+      action: function action(text, _selection, pattern, lineStart) {
         var match = pattern.exec(text);
         var annotatedText = match[0];
         var matchedText = match[1];
@@ -322,32 +382,25 @@ function () {
           _this.quill.insertText(_this.quill.getSelection(), " ");
         }, 0);
       }
-    }, // {
-    //   name: "hr",
-    //   pattern: /^([-*]\s?){3}/g,
-    //   action: (text, selection) => {
-    //     const startIndex = selection.index - text.length;
-    //     setTimeout(() => {
-    //       this.quill.deleteText(startIndex, text.length);
-    //       this.quill.insertEmbed(
-    //         startIndex + 1,
-    //         "hr",
-    //         true,
-    //         this.quill.sources.USER
-    //       );
-    //       this.quill.insertText(
-    //         startIndex + 2,
-    //         "\n",
-    //         this.quill.sources.SILENT
-    //       );
-    //       this.quill.setSelection(startIndex + 2, this.quill.sources.SILENT);
-    //     }, 0);
-    //   }
-    // },
-    {
+    }, {
+      name: "hr",
+      pattern: /^([-*]\s?){3}/g,
+      action: function action(text, selection) {
+        var startIndex = selection.index - text.length;
+        setTimeout(function () {
+          _this.quill.deleteText(startIndex, text.length);
+
+          _this.quill.insertEmbed(startIndex + 1, "hr", true, Quill.sources.USER);
+
+          _this.quill.insertText(startIndex + 2, "\n", Quill.sources.SILENT);
+
+          _this.quill.setSelection(startIndex + 2, Quill.sources.SILENT);
+        }, 0);
+      }
+    }, {
       name: "asterisk-ul",
       pattern: /^(\*|\+)\s$/g,
-      action: function action(text, selection, pattern) {
+      action: function action(_text, selection, _pattern) {
         setTimeout(function () {
           _this.quill.formatLine(selection.index, 1, "list", "unordered");
 
@@ -392,7 +445,7 @@ function () {
       }
     }]; // Handler that looks for insert deltas that match specific characters
 
-    this.quill.on("text-change", function (delta, oldContents, source) {
+    this.quill.on("text-change", function (delta, _oldContents, _source) {
       for (var i = 0; i < delta.ops.length; i++) {
         if (delta.ops[i].hasOwnProperty("insert")) {
           if (delta.ops[i].insert === " ") {
@@ -562,15 +615,15 @@ var script = {
     });
     this.renderValue(this.value);
   },
+  beforeDestroy: function beforeDestroy() {
+    this.quill = null;
+  },
   methods: {
     renderValue: function renderValue(value) {
       if (this.quill) {
         if (value) this.quill.pasteHTML(value);else this.quill.setText("");
       }
     }
-  },
-  beforeDestroy: function beforeDestroy() {
-    this.quill = null;
   }
 };
 

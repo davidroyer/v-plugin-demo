@@ -52,6 +52,8 @@
 </template>
 
 <script>
+/* eslint-disable vue/require-default-prop */
+
 import Quill from "quill";
 import fullToolbar from "@/helpers/fullToolbar";
 import defaultToolbar from "@/helpers/default-toolbar";
@@ -111,6 +113,9 @@ export default {
 
     this.renderValue(this.value);
   },
+  beforeDestroy() {
+    this.quill = null;
+  },
   methods: {
     renderValue(value) {
       if (this.quill) {
@@ -118,9 +123,6 @@ export default {
         else this.quill.setText("");
       }
     }
-  },
-  beforeDestroy() {
-    this.quill = null;
   }
 };
 </script>
