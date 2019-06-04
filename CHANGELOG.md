@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/davidroyer/v-plugin-demo/compare/v0.3.6...v0.4.0) (2019-06-04)
+
+
+### Build System
+
+* adds posttag script ([f081a9b](https://github.com/davidroyer/v-plugin-demo/commit/f081a9b))
+
+
+### Features
+
+* adds my vue-cli-plugin-vp from GIthub ([758e069](https://github.com/davidroyer/v-plugin-demo/commit/758e069))
+
+
+
 ### [0.3.6](https://github.com/davidroyer/v-plugin-demo/compare/v0.3.5...v0.3.6) (2019-06-04)
 
 
