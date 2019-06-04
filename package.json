@@ -1,6 +1,6 @@
 {
   "name": "v-plugin-demo",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "author": {
     "name": "David Royer",
     "email": "droyer01@gmail.com"
@@ -23,6 +23,11 @@
     "release:alpha": "standard-version --prerelease alpha && git push --follow-tags origin dev",
     "release:alphaexample": "standard-version --prerelease alpha && git push --follow-tags origin dev && npm publish --tag alpha",
     "release": "standard-version --release-as minor && git push --follow-tags"
+  },
+  "standard-version": {
+    "scripts": {
+      "postbump": "yarn vue-cli-service build && git add -A && git commit -m 'chore: new build'"
+    }
   },
   "main": "dist/v-plugin-demo.common.js",
   "module": "dist/v-plugin-demo.esm.js",
