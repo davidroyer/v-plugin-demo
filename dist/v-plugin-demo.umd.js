@@ -224,10 +224,10 @@
       customModules: Array
     },
     methods: {
-      registerCustomModules: function registerCustomModules(Quill$$1) {
+      registerCustomModules: function registerCustomModules(Quill) {
         if (this.customModules !== undefined) {
           this.customModules.forEach(function (customModule) {
-            Quill$$1.register("modules/" + customModule.alias, customModule.module);
+            Quill.register("modules/" + customModule.alias, customModule.module);
           });
         }
       }
@@ -955,7 +955,7 @@
   const __vue_script__$1 = script$1;
 
   /* template */
-  var __vue_render__$1 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"quillWrapper"},[_vm._t("toolbar"),_vm._v(" "),_c('div',{ref:"quillContainer",attrs:{"id":_vm.id}}),_vm._v(" "),(_vm.useCustomImageHandler)?_c('input',{ref:"fileInput",staticStyle:{"display":"none"},attrs:{"id":"file-upload","type":"file","accept":"image/*"},on:{"change":function($event){_vm.emitImageInfo($event);}}}):_vm._e()],2)};
+  var __vue_render__$1 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"quillWrapper"},[_vm._t("toolbar"),_vm._v(" "),_c('div',{ref:"quillContainer",attrs:{"id":_vm.id}}),_vm._v(" "),(_vm.useCustomImageHandler)?_c('input',{ref:"fileInput",staticStyle:{"display":"none"},attrs:{"id":"file-upload","type":"file","accept":"image/*"},on:{"change":function($event){return _vm.emitImageInfo($event)}}}):_vm._e()],2)};
   var __vue_staticRenderFns__$1 = [];
 
     /* style */
@@ -1034,10 +1034,10 @@
   // }
 
   exports.Quill = Quill;
-  exports.install = install;
-  exports.default = VPlugin;
-  exports.VueEditor = VueEditor;
   exports.Editor = Editor;
+  exports.VueEditor = VueEditor;
+  exports.default = VPlugin;
+  exports.install = install;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
