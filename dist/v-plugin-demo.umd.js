@@ -1,5 +1,5 @@
 /*!
- * v-plugin-demo v0.4.7 
+ * v-plugin-demo v0.4.8 
  * (c) 2019 David Royer
  * Released under the undefined License.
  */
@@ -986,7 +986,7 @@
       undefined
     );
 
-  var version = "0.4.7"; // Declare install function executed by Vue.use()
+  var version = "0.4.8"; // Declare install function executed by Vue.use()
 
   function install(Vue) {
     if (install.installed) return;
