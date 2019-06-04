@@ -1,3 +1,11 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.2.1](https://github.com/davidroyer/v-plugin-demo/compare/v0.2.0...v0.2.1) (2019-06-04)
+
+
+
 ## 0.1.0 (2019-06-03)
 
 * chore: adds commit build tool ([66521db](https://github.com/davidroyer/v-plugin-demo/commit/66521db))
@@ -20,6 +28,3 @@
 * build: new build ([76b24d7](https://github.com/davidroyer/v-plugin-demo/commit/76b24d7))
 * build: new build with Vue2Editor ([48a9bb8](https://github.com/davidroyer/v-plugin-demo/commit/48a9bb8))
 * refactor: importing quill css ([7e0680a](https://github.com/davidroyer/v-plugin-demo/commit/7e0680a))
-
-
-
