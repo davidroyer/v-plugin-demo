@@ -6,7 +6,9 @@
 import Vue from "vue";
 import plugin from "./index";
 console.log("TCL: plugin", plugin);
-import { VueEditor } from "./index";
+import { VueEditor, Quill, version } from "./index";
+console.log("TCL: version", version);
+console.log("TCL: Quill", Quill);
 console.log("TCL: VueEditor", VueEditor);
 
 Vue.use(plugin);
