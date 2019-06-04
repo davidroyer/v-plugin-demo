@@ -1,6 +1,6 @@
 {
   "name": "v-plugin-demo",
-  "version": null,
+  "version": "0.3.2-next.2",
   "author": {
     "name": "David Royer",
     "email": "droyer01@gmail.com"
@@ -20,7 +20,7 @@
     "prepublish": "vue-cli-service lint && vue-cli-service docs --mode build && vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "log": "yarn conventional-changelog -i CHANGELOG.md -s ./node_modules/git-commit-message-convention/convention.js -r 0",
-    "release:next": "git add -A && standard-version -a  && git push --follow-tags",
+    "release:next": "git add -A && standard-version --prerelease alpha -a  && git push --follow-tags",
     "release": "standard-version && git push --follow-tags"
   },
   "main": "dist/v-plugin-demo.common.js",
