@@ -4,6 +4,19 @@
 import {VuePlugin} from 'vue2-editor/modular'
 ```
 
+## For Releasing & Publishing
+
+`standard-version` has Lifecycle scripts that make it much easier
+
+```json
+  "standard-version": {
+    "scripts": {
+      "postbump": "yarn vue-cli-service build && git add -A && git commit -m 'chore: new build'",
+      "posttag": "git push --follow-tags"
+    }
+  },
+```
+
 ## For Commits
 
 [Repo: git-commit-message-convention](https://github.com/kazupon/git-commit-message-convention)
