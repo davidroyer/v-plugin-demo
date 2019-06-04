@@ -19,7 +19,8 @@
     "docs:serve": "vue-cli-service docs --mode serve",
     "prepublish": "vue-cli-service lint && vue-cli-service docs --mode build && vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "log": "yarn conventional-changelog -i CHANGELOG.md -s ./node_modules/git-commit-message-convention/convention.js -r 0"
+    "log": "yarn conventional-changelog -i CHANGELOG.md -s ./node_modules/git-commit-message-convention/convention.js -r 0",
+    "release": "standard-version && git push --follow-tags"
   },
   "main": "dist/v-plugin-demo.common.js",
   "module": "dist/v-plugin-demo.esm.js",
@@ -53,6 +54,7 @@
     "rollup-plugin-alias": "^1.5.1",
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
+    "standard-version": "^6.0.1",
     "vue": "^2.6.10",
     "vue-cli-plugin-p11n": "^0.3.0",
     "vue-template-compiler": "^2.6.10"
