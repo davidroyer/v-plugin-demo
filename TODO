@@ -1,6 +1,7 @@
 
 Todo:
-  ☐ Switch to my vue-cli plugin, vue-cli-plugin-vp
+  ✔ Switch to my vue-cli plugin, vue-cli-plugin-vp @done(19-06-04 19:05)
   ☐ Change name to vue-cli-plugin-vplugin
-  ☐ Add script to run after release runs to push to Github
-  
+  ✔ Add script to run after release runs to push to Github @done(19-06-04 19:05)
+  ✔ Remove messed up tags @done(19-06-04 19:06)
+   
