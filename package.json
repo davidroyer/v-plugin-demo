@@ -1,6 +1,6 @@
 {
   "name": "v-plugin-demo",
-  "version": "0.3.2-alpha.2",
+  "version": "0.3.3",
   "author": {
     "name": "David Royer",
     "email": "droyer01@gmail.com"
@@ -22,7 +22,7 @@
     "log": "yarn conventional-changelog -i CHANGELOG.md -s ./node_modules/git-commit-message-convention/convention.js -r 0",
     "release:alpha": "standard-version --prerelease alpha && git push --follow-tags origin dev",
     "release:alphaexample": "standard-version --prerelease alpha && git push --follow-tags origin dev && npm publish --tag alpha",
-    "release": "standard-version && git push --follow-tags"
+    "release": "standard-version --release-as minor && git push --follow-tags"
   },
   "main": "dist/v-plugin-demo.common.js",
   "module": "dist/v-plugin-demo.esm.js",
@@ -37,7 +37,7 @@
   "standard-version": {
     "scripts": {
       "prebump": "echo pre9.9.9",
-      "postbump": "yarn vue-cli-service build && git add -A"
+      "postbump": "yarn vue-cli-service build && git add -A && git commit -m 'chore: new build'"
     }
   },
   "dependencies": {
