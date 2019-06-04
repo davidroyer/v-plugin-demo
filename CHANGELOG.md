@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.2-next.1](https://github.com/davidroyer/v-plugin-demo/compare/v0.3.2-next.0...v0.3.2-next.1) (2019-06-04)
+
+
+### Bug Fixes
+
+* moves release scripts to correct property ([70de2a2](https://github.com/davidroyer/v-plugin-demo/commit/70de2a2))
+
+
+
 ### [0.3.2-next.0](https://github.com/davidroyer/v-plugin-demo/compare/v0.3.1...v0.3.2-next.0) (2019-06-04)
 
 
