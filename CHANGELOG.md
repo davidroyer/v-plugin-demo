@@ -2,10 +2,6 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [](https://github.com/davidroyer/v-plugin-demo/compare/v0.3.2-next.1...v) (2019-06-04)
-
-
-
 ### [0.3.2-next.1](https://github.com/davidroyer/v-plugin-demo/compare/v0.3.2-next.0...v0.3.2-next.1) (2019-06-04)
 
 
