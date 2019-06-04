@@ -63,3 +63,20 @@ Added `rollup-plugin-css-only`.
   @import "~/src/assets/editor.css";
 </style>
 ```
+
+### Build & Release
+
+This allows me to commit build files with release files
+
+```bash
+# Inside package.json
+{
+  "standard-version": {
+    "scripts": {
+      "postbump": "yarn vue-cli-service build && git add -A && git commit -m 'chore: new build'"
+    }
+  }
+}
+```
+
+**See Lifecycle Scripts: https://github.com/conventional-changelog/standard-version#lifecycle-scripts**
