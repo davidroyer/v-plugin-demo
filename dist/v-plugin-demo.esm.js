@@ -1,5 +1,5 @@
 /*!
- * v-plugin-demo v0.3.2-alpha.2 
+ * v-plugin-demo vnull 
  * (c) 2019 David Royer
  * Released under the undefined License.
  */
@@ -981,7 +981,7 @@ var __vue_staticRenderFns__$1 = [];
     undefined
   );
 
-var version = "0.3.2-alpha.2"; // Declare install function executed by Vue.use()
+var version = "null"; // Declare install function executed by Vue.use()
 
 function install(Vue) {
   if (install.installed) return;
