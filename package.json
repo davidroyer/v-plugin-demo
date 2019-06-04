@@ -1,6 +1,6 @@
 {
   "name": "v-plugin-demo",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "author": {
     "name": "David Royer",
     "email": "droyer01@gmail.com"
@@ -19,8 +19,6 @@
     "docs:serve": "vue-cli-service docs --mode serve",
     "prepublish": "vue-cli-service lint && vue-cli-service docs --mode build && vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "release:alpha": "standard-version --prerelease alpha && git push --follow-tags origin dev",
-    "release:alphaexample": "standard-version --prerelease alpha && git push --follow-tags origin dev && npm publish --tag alpha",
     "release": "standard-version"
   },
   "standard-version": {
