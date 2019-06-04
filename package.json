@@ -19,10 +19,9 @@
     "docs:serve": "vue-cli-service docs --mode serve",
     "prepublish": "vue-cli-service lint && vue-cli-service docs --mode build && vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "log": "yarn conventional-changelog -i CHANGELOG.md -s ./node_modules/git-commit-message-convention/convention.js -r 0",
     "release:alpha": "standard-version --prerelease alpha && git push --follow-tags origin dev",
     "release:alphaexample": "standard-version --prerelease alpha && git push --follow-tags origin dev && npm publish --tag alpha",
-    "release": "standard-version --release-as minor && git push --follow-tags"
+    "release": "standard-version && git push --follow-tags"
   },
   "standard-version": {
     "scripts": {
