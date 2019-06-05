@@ -92,4 +92,22 @@ This allows me to commit build files with release files
 }
 ```
 
-**See Lifecycle Scripts: https://github.com/conventional-changelog/standard-version#lifecycle-scripts**
+> **See `standard-version` [Lifecycle Scripts](https://github.com/conventional-changelog/standard-version#lifecycle-scripts)**  
+
+## What I Now Know About The Bundling Process
+
+### UMD
+
+UMD is sort of like a swiss-army-knife. It can handle multiple situation. This is why you'll sometimes see a library be published and only built with the UMD type. This is what Vue2Editor was originally when using Poi 9 I believe.
+
+For our purposes, it serves as the version we use when our plugin is loaded via `script` tag.
+
+### CommonJS
+
+CommonJS is for the situations where you don't have a bundled like Webpack or Rollup.
+
+### ESM
+
+Bundlers like Webpack and Rollup can use this version. They do this happens by picking up on the value of the `module` property in your plugin's `package.json`.
+
+This allows for Tree-Shaking (I've never set this up before though).
