@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/davidroyer/v-plugin-demo/compare/v0.4.9...v0.5.0) (2019-06-05)
+
+
+### Features
+
+* :lighting: Adds info to \`Notes.md\` ([e37d464](https://github.com/davidroyer/v-plugin-demo/commit/e37d464))
+
+
+
 ### [0.4.9](https://github.com/davidroyer/v-plugin-demo/compare/v0.4.8...v0.4.9) (2019-06-05)
 
 
