@@ -996,8 +996,8 @@ function install(Vue) {
 }
 var VPlugin = {
   install: install,
-  version: version,
-  Quill: Quill
+  version: version // Quill
+
 }; // Auto-install when vue is found (eg. in browser via <script> tag)
 
 var GlobalVue = null;

@@ -1,5 +1,4 @@
 import Quill from "quill";
-import Editor from "@/components/Editor.vue";
 import VueEditor from "@/components/VueEditor.vue";
 
 const version = "__VERSION__";
@@ -8,11 +7,11 @@ const version = "__VERSION__";
 export function install(Vue) {
   if (install.installed) return;
   install.installed = true;
+
   Vue.prototype.$add = (a, b) => {
     return a + b;
   };
 
-  Vue.component("Editor", Editor);
   Vue.component("VueEditor", VueEditor);
 }
 
@@ -34,7 +33,7 @@ if (GlobalVue) {
 }
 
 export default VPlugin;
-export { VueEditor, Editor, Quill };
+export { VueEditor, Quill };
 
 /*************************************************/
 
