@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-* :lighting: Adds info to \`Notes.md\` ([e37d464](https://github.com/davidroyer/v-plugin-demo/commit/e37d464))
+* :star: Adds info to `Notes.md` ([e37d464](https://github.com/davidroyer/v-plugin-demo/commit/e37d464))
 
 
 
