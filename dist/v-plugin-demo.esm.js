@@ -1,5 +1,5 @@
 /*!
- * v-plugin-demo v0.4.9 
+ * v-plugin-demo v0.5.0 
  * (c) 2019 David Royer
  * Released under the undefined License.
  */
@@ -888,7 +888,7 @@ var __vue_staticRenderFns__ = [];
     undefined
   );
 
-var version = "0.4.9"; // Declare install function executed by Vue.use()
+var version = "0.5.0"; // Declare install function executed by Vue.use()
 
 function install(Vue) {
   if (install.installed) return;
@@ -918,21 +918,6 @@ if (GlobalVue) {
   GlobalVue.use(VPlugin);
 }
 /*************************************************/
-
-/** NOTE: Original way commented out. Testing `GlobalVue` way */
-// const install = Vue => {
-//   /*
-//    * Note: if you need to extend Vue contstructor, you can extend it in here.
-//    */
-//   Vue.prototype.$add = (a, b) => {
-//     return a + b;
-//   };
-//   Vue.component("Editor", Editor);
-//   Vue.component("VueEditor", VueEditor);
-// };
-// if (typeof window !== "undefined" && window.Vue) {
-//   window.Vue.use(VPlugin);
-// }
 
 export default VPlugin;
 export { VueEditor, install };
