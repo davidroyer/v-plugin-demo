@@ -19,15 +19,12 @@ import {VuePlugin} from 'vue2-editor/modular'
 
 ## For Commits
 
-[Repo: git-commit-message-convention](https://github.com/kazupon/git-commit-message-convention)
-
-### Example commit msg
+I figured out that I don't need to try to escape backticks for inline code. Here's an example of using code and emojis:
 
 ```bash
-:chart_with_upwards_trend: performance(graphite): remove graphiteWidth option
-
-The graphiteWidth option has been removed. The default graphite width of 10mm is always used for performance reason.
+ git commit -am 'fix: :bug: fixes emoji in `CHANGELOG.md`'
 ```
+
 
 ## Rollup
 
