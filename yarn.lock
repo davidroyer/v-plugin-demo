@@ -11303,9 +11303,9 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vue-cli-plugin-vp@davidroyer/vue-cli-plugin-vp:
+vue-cli-plugin-vplugin@davidroyer/vue-cli-plugin-vplugin:
   version "0.0.1"
-  resolved "https://codeload.github.com/davidroyer/vue-cli-plugin-vp/tar.gz/cd4af14aceeb574e97d2dace7c1e1f9a29b45dff"
+  resolved "https://codeload.github.com/davidroyer/vue-cli-plugin-vplugin/tar.gz/7c6ab752b33f45b4805d4fbf89a968c8a884abfa"
   dependencies:
     chalk "^2.4.2"
     debug "^4.1.1"

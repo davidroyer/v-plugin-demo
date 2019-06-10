@@ -6,6 +6,10 @@ import {VuePlugin} from 'vue2-editor/modular'
 
 ## For Releasing & Publishing
 
+**References**
+
+* [Conventional Changelog Configuration Spec](https://github.com/conventional-changelog/conventional-changelog-config-spec/blob/master/versions/2.0.0/README.md#types)
+
 `standard-version` has Lifecycle scripts that make it much easier
 
 ```json
