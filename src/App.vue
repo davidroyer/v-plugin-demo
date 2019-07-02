@@ -4,7 +4,7 @@
     <h1>Welcome to Your Plugin in Vue.js</h1>
     <p>add: 1 + 1 = {{ $add(1, 1) }}</p>
     <!-- <Editor v-model="content" @text-change="handleTextChange" /> -->
-    <vue-editor
+    <!-- <vue-editor
       v-model="content"
       use-markdown-shortcuts
       :editor-options="editorOptions"
@@ -50,12 +50,8 @@
           <button class="ql-clean"></button>
         </span>
       </div>
-    </vue-editor>
-    <!-- <VueEditor
-      v-model="content"
-      use-markdown-shortcuts
-      :editor-options="editorOptions"
-    /> -->
+    </vue-editor> -->
+    <VueEditor v-model="content" use-markdown-shortcuts />
   </div>
 </template>
 
@@ -65,15 +61,15 @@ export default {
   // components: { Editor },
   data() {
     return {
-      // eToolbar: [
-      //   [
-      //     { align: "" },
-      //     { align: "center" },
-      //     { align: "right" },
-      //     { align: "justify" }
-      //   ],
-      //   ["blockquote", "code-block"]
-      // ],
+      eToolbar: [
+        [
+          { align: "" },
+          { align: "center" },
+          { align: "right" },
+          { align: "justify" }
+        ],
+        ["blockquote", "code-block"]
+      ],
       editorOptions: {
         modules: {
           toolbar: "#my-toolbar"
@@ -91,7 +87,7 @@ export default {
         },
         placeholder: "newww placeholder text here ..."
       },
-      content: "value"
+      content: "Value For Cypress"
     };
   },
 

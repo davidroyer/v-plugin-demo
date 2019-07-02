@@ -18,7 +18,9 @@
     "docs:build": "vue-cli-service docs --mode build",
     "docs:serve": "vue-cli-service docs --mode serve",
     "prepublish": "vue-cli-service lint && vue-cli-service docs --mode build && vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
+    "test:unit:original": "vue-cli-service test:unit",
+    "test:unit": "vue-cli-service test:unit --watch - u",
+    "test:e2e": "vue-cli-service test:e2e",
     "release:alpha": "standard-version --prerelease alpha && git push --follow-tags origin dev",
     "release:alphaexample": "standard-version --prerelease alpha && git push --follow-tags origin dev && npm publish --tag alpha",
     "release": "standard-version"
@@ -45,6 +47,7 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-plugin-e2e-cypress": "^3.8.0",
     "@vue/cli-plugin-eslint": "^3.8.0",
     "@vue/cli-plugin-unit-jest": "^3.8.0",
     "@vue/cli-service": "^3.8.0",
