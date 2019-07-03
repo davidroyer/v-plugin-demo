@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/davidroyer/v-plugin-demo/compare/v0.5.1...v0.6.0) (2019-07-03)
+
+
+### Bug Fixes
+
+* **index.js:** Simulates fix ([36c2542](https://github.com/davidroyer/v-plugin-demo/commit/36c2542))
+
+
+### Features
+
+* **plugin:** :rocket: adds my comment ([7019047](https://github.com/davidroyer/v-plugin-demo/commit/7019047))
+
+
+
 ### [0.5.1](https://github.com/davidroyer/v-plugin-demo/compare/v0.5.0...v0.5.1) (2019-06-05)
 
 
