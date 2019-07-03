@@ -3,6 +3,9 @@ import VueEditor from "@/components/VueEditor.vue";
 
 const version = "__VERSION__";
 
+console.log("From davidroyer2 - PR1");
+console.log("From ME inside pr/davidroyer2/1");
+
 // Declare install function executed by Vue.use()
 export function install(Vue) {
   if (install.installed) return;
